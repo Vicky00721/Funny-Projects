@@ -1,6 +1,7 @@
 import glob
 import os
 from math import cos, pi
+
 import cv2
 import numpy as np
 
@@ -396,7 +397,7 @@ class HeartSignal:
 if __name__ == '__main__':
     import yaml
 
-    settings = yaml.load(open("./settings.yaml", "r", encoding="utf-8"), Loader=yaml.FullLoader)
+    settings = yaml.load(open("settings.yaml", "r", encoding="utf-8"), Loader=yaml.FullLoader)
     if settings["wait"] == -1:
         settings["wait"] = int(settings["period_time"] / settings["frame_num"])
     del settings["period_time"]
